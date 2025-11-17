@@ -1,0 +1,372 @@
+:root {
+    --bg-dark-main: #FFFFFF;      /* Main background (White) */
+    --bg-dark-secondary: #f4f4f4; /* Cards ka background (Light Grey) */
+    --primary-color: #007BFF;     /* Primary accent color (Blue) */
+    --primary-hover: #0056b3;     /* Accent color jab hover karein (Darker Blue) */
+    --text-light: #333333;        /* Main text color (Dark Grey) */
+    --text-secondary: #555555;    /* Halka text (Medium Grey) */
+    --border-color: #dddddd;      /* Borders ke liye (Light Grey) */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-dark-main);
+    color: var(--text-light);
+}
+
+h1, h2, h3 {
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+section {
+    padding: 70px 5%;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== 2. Navigation Bar (Glassmorphism Effect) ===== */
+nav {
+    display: flex; /* Links ko horizontal karega */
+    justify-content: space-between; /* Logo ek taraf, links doosri taraf */
+    align-items: center; /* Vertically center */
+    padding: 1rem 3%; /* Andar ka space */
+    position: sticky; /* Scroll karne par upar chipka rahega */
+    top: 15px; /* Upar se 15px neeche */
+    z-index: 100;
+    margin: 0 5%; /* Side se 5% gap taake yeh box lage */
+     background-color: rgba(255, 255, 255, 0.6); /* Transparent WHITE background */
+    backdrop-filter: blur(10px);        /* Peeche ki cheezon ko BLUR karega */
+    -webkit-backdrop-filter: blur(10px);    /* Safari browser ke liye */
+    border: 1px solid var(--border-color);   /* Halka sa border */
+    border-radius: 10px;                  /* Box ko gol corner dega */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);   /* Halka sa shadow */
+}
+
+nav .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none; 
+}
+
+nav .nav-links li {
+    margin-left: 25px; 
+}
+
+nav .nav-links a {
+    color: var(--text-light);
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease; 
+}
+
+nav .nav-links a:hover {
+    color: var(--primary-hover); 
+}
+
+
+#hero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    padding: 60px 5%; 
+    background-color: var(--bg-dark-secondary);
+    min-height: 85vh;
+    border-radius: 10px;
+    margin: 0 5%;
+}
+
+#hero .hero-content {
+    max-width: 500px;
+    text-align: left;
+}
+.hero-pic {
+    width: 250px;  /* <-- Ise 150px se 250px kar diya */
+    height: 250px; /* <-- Ise 150px se 250px kar diya */
+    border-radius: 50%; /* Gol shape */
+    object-fit: cover;    /* Yeh poora circle fill karega */
+    object-position: 100%; 
+    margin-bottom: 25px; 
+}
+
+/* === CHANGE YAHAN HUA HAI === */
+/* Purana #hero h1 hata kar yeh naya code add kiya hai */
+
+#typewriter-text {
+    font-size: 3.5rem;
+    color: var(--text-light); /* "Hi, I'm" ka color */
+    
+    /* Height set karein taaki page jump na kare jab text type ho */
+    min-height: 8rem; 
+}
+
+/* Typewriter text ka highlighted (blue) part */
+#typewriter-text .highlight {
+    color: var(--primary-color);
+}
+
+/* Blinking cursor effect */
+#typewriter-text .caret {
+    font-weight: bold;
+    color: var(--primary-color); /* Cursor ka color blue rakha hai */
+    animation: blink 0.7s infinite;
+}
+
+/* Blinking animation ke keyframes */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+/* === CHANGE KHATAM === */
+
+
+#hero p {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    margin: 10px 0 30px;
+}
+
+/* Common Button Style + Animation */
+.cta-button {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--primary-color);
+    padding: 14px 28px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+}
+
+#about {
+    max-width: 800px;
+    margin: 80px auto; 
+    padding: 60px 20px; 
+    background-color: var(--bg-dark-secondary);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+}
+#about h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+.skills h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+
+.skills span {
+    display: inline-block;
+    background: var(--bg-dark-main);
+    color: var(--primary-hover);
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 1px solid var(--border-color);
+}
+
+/* ===== 5. Projects Section ===== */
+#projects {
+    background-color: var(--bg-dark-main);
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+}
+
+#projects > p { 
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap; 
+    gap: 30px; 
+    margin-top: 40px;
+}
+
+.project-card {
+    background-color: var(--bg-dark-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    width: 360px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    padding: 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 167, 157, 0.1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    flex-grow: 1; 
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+}
+
+.project-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    background-color: var(--bg-dark-main);
+    border: 1px solid var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.project-links a:first-of-type {
+     background-color: var(--primary-color);
+     color: var(--bg-dark-main);
+}
+
+.project-links a:hover {
+    background-color: var(--primary-hover);
+    color: var(--bg-dark-main);
+    border-color: var(--primary-hover);
+}
+
+
+/* ===== 6. Contact Section ===== */
+#contact {
+    max-width: 600px;
+    margin: auto;
+    background-color: var(--bg-dark-secondary);
+    border-radius: 8px;
+    border-top: 4px solid var(--primary-color);
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+}
+
+#contact p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+}
+
+/* ===== 7. Footer ===== */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--bg-dark-secondary);
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+}
+
+/* ===== 8. RESPONSIVE DESIGN (For Mobile) ===== */
+
+@media (max-width: 768px) {
+    /* === NAYA CHANGE === */
+    #typewriter-text {
+        font-size: 2.5rem;
+        min-height: 6rem; /* Mobile ke liye height adjust ki */
+    }
+    /* === CHANGE KHATAM === */
+    
+    nav {
+        margin: 0;
+        border-radius: 0;
+        top: 0;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        margin: 0;
+    }
+    
+    /* === NAYA CHANGE === */
+    #typewriter-text {
+        font-size: 2rem;
+        min-height: 5rem; /* Mobile ke liye height adjust ki */
+    }
+    /* === CHANGE KHATAM === */
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
