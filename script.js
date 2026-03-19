@@ -135,3 +135,25 @@ document.addEventListener("DOMContentLoaded", function() {
     // Typing shuru karein (page load hone ke 500ms baad)
     setTimeout(typeLine1, 500);
 });
+
+
+// ====== Scroll Reveal Animations ======
+// Jab user scroll karega toh elements smoothly fade in honge
+
+document.addEventListener("DOMContentLoaded", function() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, { 
+        threshold: 0.1 // Jab element 10% screen par aye tab trigger hoga
+    });
+
+    reveals.forEach((reveal) => {
+        observer.observe(reveal);
+    });
+});
