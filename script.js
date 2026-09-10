@@ -18,7 +18,38 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
             behavior: 'smooth',
             block: blockPosition // Yahan 'center' ya 'start' use hoga
         });
+
+        // Mobile par link click hone ke baad menu band kar dein
+        const navLinks = document.getElementById('nav-links');
+        const menuToggle = document.getElementById('menu-toggle');
+        if (navLinks && navLinks.classList.contains('open')) {
+            navLinks.classList.remove('open');
+            menuToggle.classList.remove('active');
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
     });
+});
+
+// ====== Mobile Hamburger Menu ======
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function () {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }
+});
+
+// ====== Dynamic Footer Year ======
+document.addEventListener("DOMContentLoaded", function () {
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 });
 
 
@@ -134,4 +165,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Typing shuru karein (page load hone ke 500ms baad)
     setTimeout(typeLine1, 500);
+});
+
+
+// ====== Scroll Reveal Animations ======
+// Jab user scroll karega toh elements smoothly fade in honge
+
+document.addEventListener("DOMContentLoaded", function() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, { 
+        threshold: 0.1 // Jab element 10% screen par aye tab trigger hoga
+    });
+
+    reveals.forEach((reveal) => {
+        observer.observe(reveal);
+    });
 });

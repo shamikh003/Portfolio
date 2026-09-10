@@ -3,85 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Shamikh - Web Developer</title>
+    <title>Muhammad Shamikh - Full Stack Developer</title>
+    <meta name="description" content="Muhammad Shamikh - Full Stack Developer & BS Computer Science student building clean, responsive websites and AI-powered apps.">
+    <meta property="og:title" content="Muhammad Shamikh - Full Stack Developer">
+    <meta property="og:description" content="Portfolio of Muhammad Shamikh - web development projects, AI apps, and more.">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="favicon.png?v=1.0">
-    <link rel="stylesheet" href="style.css?v=1.2">
+    <link rel="stylesheet" href="style.css?v=1.3">
 </head>
 <body>
 
     <nav>
         <div class="logo">Muhammad Shamikh</div>
-        <ul class="nav-links">  <li><a href="#hero">Home</a></li>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="nav-socials">
+            <a href="https://github.com/shamikh003" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" class="social-icon" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.5c0 4.99 3.24 9.22 7.74 10.72.57.1.78-.25.78-.55v-2.12c-3.15.68-3.81-1.35-3.81-1.35-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.62 1.22 3.26.94.1-.73.39-1.22.71-1.5-2.51-.29-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.16-3.04-.12-.29-.5-1.45.11-3.02 0 0 .95-.3 3.12 1.16a10.8 10.8 0 0 1 5.68 0c2.16-1.46 3.11-1.16 3.11-1.16.62 1.57.23 2.73.11 3.02.73.79 1.16 1.8 1.16 3.04 0 4.35-2.65 5.31-5.17 5.59.4.35.77 1.03.77 2.08v3.08c0 .3.2.66.79.55 4.49-1.5 7.73-5.73 7.73-10.72C23.02 5.24 18.27.5 12 .5Z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-shamikh/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" class="social-icon" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            </a>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
-    
+
     <header id="hero">
-    
-        <img src="image.png" alt="Muhammad Shamikh" class="hero-pic"> 
-        
+        <img src="image.webp" alt="Muhammad Shamikh - Full Stack Developer" class="hero-pic" width="250" height="250" fetchpriority="high">
         <div class="hero-content">
-            
             <h1 id="typewriter-text"></h1>
             <p>A web developer passionate about creating clean websites.</p>
             <a href="#projects" class="cta-button">View My Work</a>
         </div>
-    
     </header>
     
-
-    <section id="about">
+    <section id="about" class="reveal">
         <h2>About Me</h2>
         <p>I'm Muhammad Shamikh, a BS Computer Science student at Federal Urdu University, Karachi. My core skills are web development (building websites) and Canva designing. I am very interested in technology and am always learning how to best use AI in both development and design.</p>
     </section>
 
     <section id="projects">
-        <h2>My Projects</h2>
+        <h2 class="reveal">My Projects</h2>
         <div class="projects-container">
             
-            <div class="project-card">
-                <img src="Calculator.png" alt="Project 1 Screenshot">
+            <div class="project-card reveal">
+                <img src="Calculator.webp" alt="Scientific Calculator project screenshot" loading="lazy" width="700" height="400">
                 <h3>Calculator</h3>
                 <p>This is an interactive, fully responsive scientific calculator built purely with HTML, CSS, and JavaScript.This calculator goes beyond basic arithmetic, handling complex trigonometric functions while providing a sleek, user-friendly visual experience.</p>
                 <div class="project-links">
-                    <a href=" https://shamikh003.github.io/Calculator/">Live Demo</a>
-                    <a href="https://github.com/shamikh003/Calculator">View Code</a>
+                    <a href="https://shamikh003.github.io/Calculator/" target="_blank" class="fancy-link">Live Demo</a>
+                    <a href="https://github.com/shamikh003/Calculator" target="_blank" class="fancy-link-outline">View Code</a>
                 </div>
             </div>
 
-            <div class="project-card">
-                <img src="Zakat.png" alt="Project 2 Screenshot">
+            <div class="project-card reveal">
+                <img src="Zakat.webp" alt="Zakat Calculator project screenshot" loading="lazy" width="700" height="400">
                 <h3>Zakat Calculator</h3>
                 <p>A simple, accurate, and bilingual (English + Urdu) Zakat Calculator that helps Muslims calculate their annual Zakat based on gold, silver, or cash holdings.</p>
                 <div class="project-links">
-                    <a href="https://shamikh003.github.io/Zakat-Calculator/">Live Demo</a>
-                    <a href="https://github.com/shamikh003/Zakat-Calculator">View Code</a>
+                    <a href="https://shamikh003.github.io/Zakat-Calculator/" target="_blank" class="fancy-link">Live Demo</a>
+                    <a href="https://github.com/shamikh003/Zakat-Calculator" target="_blank" class="fancy-link-outline">View Code</a>
                 </div>
             </div>
-             <div class="project-card">
-                <img src="Quiz.jpeg" alt="Project 3 Screenshot">
+            
+             <div class="project-card reveal">
+                <img src="Quiz.webp" alt="Quiz System project screenshot" loading="lazy" width="700" height="400">
                 <h3>Quiz System</h3>
                 <p>This is a comprehensive, full-stack quiz application built from scratch. It features a secure, password-protected admin panel for teachers and a clean, responsive portal for students to take timed quizzes.The frontend is built with pure HTML, CSS, and JavaScript and is hosted on GitHub Pages. The backend is a RESTful API built with Node.js, Express, and MongoDB, and is hosted live on Render.</p>
                 <div class="project-links">
-                    <a href="https://shamikh003.github.io/Quiz-System/">Live Demo</a>
-                    <a href="https://github.com/shamikh003/Quiz-System">View Code</a>
+                    <a href="https://shamikh003.github.io/Quiz-System/" target="_blank" class="fancy-link">Live Demo</a>
+                    <a href="https://github.com/shamikh003/Quiz-System" target="_blank" class="fancy-link-outline">View Code</a>
                 </div>
             </div>
 
+            <div class="project-card reveal">
+                <img src="logo.webp" alt="AI Assessment Portal project screenshot" loading="lazy" width="700" height="400">
+                <h3>Ai Assessment Portal</h3>
+                <p>An intelligent candidate evaluation system built for Student Solutions Pvt. Ltd. using Python, Streamlit, and Google's Gemini AI. It features a live typing speed test with a timer, software MCQs, and AI-powered automated grading for email drafting tasks, instantly emailing the final report to management.</p>
+                <div class="project-links">
+                    <a href="https://students-assessment-app-ahzngsvja2v7vx7mnvjuqs.streamlit.app/" target="_blank" class="fancy-link">Live Demo</a>
+                    <a href="https://github.com/shamikh003/student-assessment-app" target="_blank" class="fancy-link-outline">View Code</a>
+                </div>
+            </div>
 
+            <div class="project-card reveal">
+                <img src="screen-ai.webp" alt="Screen.Ai project screenshot" loading="lazy" width="700" height="400">
+                <h3>Screen.Ai</h3>
+                <p>An AI-powered resume screening and live voice interview platform built with Python, Streamlit, and the Groq API (Llama 3.3 70B). It automatically screens resumes and conducts live voice interviews, streamlining candidate evaluation for recruiters.</p>
+                <div class="project-links">
+                    <a href="https://screen-ai.streamlit.app/" target="_blank" class="fancy-link">Live Demo</a>
+                    <a href="https://github.com/shamikh003/Screen.Ai" target="_blank" class="fancy-link-outline">View Code</a>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <img src="iron-peak-gym.webp" alt="Iron Peak Gym website screenshot" loading="lazy" width="700" height="400">
+                <h3>Iron Peak Gym</h3>
+                <p>A responsive gym website built to showcase membership plans, facilities, and trainers with a clean, modern layout — developed by The Digital Duo as a client-ready demo project.</p>
+                <div class="project-links">
+                    <a href="https://iron-peak-gym.onrender.com/" target="_blank" class="fancy-link">Live Demo</a>
+                    <a href="https://github.com/shamikh003/Iron-Peak-Gym" target="_blank" class="fancy-link-outline">View Code</a>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <img src="clinic-management.webp" alt="Clinic Management System screenshot" loading="lazy" width="700" height="400">
+                <h3>Clinic Management System</h3>
+                <p>A full-stack clinic management system for handling patient records, appointments, and staff workflows in a clean, easy-to-use interface.</p>
+                <div class="project-links">
+                    <a href="https://clinic-management-system-9w4f.onrender.com/" target="_blank" class="fancy-link">Live Demo</a>
+                    <a href="https://github.com/shamikh003/Clinic-Management-System" target="_blank" class="fancy-link-outline">View Code</a>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="reveal">
         <h2>Get in Touch</h2>
-         <a href="mailto:muhammadshamikh724@gmail.com" class="cta-button">
+         <a href="mailto:im.shamikh@gmail.com" class="cta-button">
          Email Me</a>
-        </section>
+         <div class="contact-socials">
+            <a href="https://github.com/shamikh003" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" class="social-icon" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.5c0 4.99 3.24 9.22 7.74 10.72.57.1.78-.25.78-.55v-2.12c-3.15.68-3.81-1.35-3.81-1.35-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.68.08-.68 1.13.08 1.72 1.16 1.72 1.16 1 1.72 2.62 1.22 3.26.94.1-.73.39-1.22.71-1.5-2.51-.29-5.15-1.26-5.15-5.6 0-1.24.44-2.25 1.16-3.04-.12-.29-.5-1.45.11-3.02 0 0 .95-.3 3.12 1.16a10.8 10.8 0 0 1 5.68 0c2.16-1.46 3.11-1.16 3.11-1.16.62 1.57.23 2.73.11 3.02.73.79 1.16 1.8 1.16 3.04 0 4.35-2.65 5.31-5.17 5.59.4.35.77 1.03.77 2.08v3.08c0 .3.2.66.79.55 4.49-1.5 7.73-5.73 7.73-10.72C23.02 5.24 18.27.5 12 .5Z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-shamikh/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" class="social-icon" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            </a>
+         </div>
+    </section>
 
     <footer>
-        <p>&copy; 2025 Muhammad Shamikh. All rights reserved.</p>
+        <p>&copy; <span id="footer-year"></span> Muhammad Shamikh. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
