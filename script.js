@@ -1,4 +1,4 @@
-// ====== Smooth Scroll (Center Align) ======
+// ====== Smooth Scroll (Start Align) ======
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault(); // Default click ko rokein
@@ -6,17 +6,10 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
 
-        // Naya logic: Check karein ki kaunsa link click hua hai
-        let blockPosition = 'center'; // Default 'center' rakhein
-
-        if (targetId === '#hero') {
-            blockPosition = 'start'; // Sirf 'Home' link ke liye 'top' par rakhein
-        }
-
-        // Section ko smoothly scroll karein
+        // Har section start (top) se khulega, center se nahi
         targetElement.scrollIntoView({
             behavior: 'smooth',
-            block: blockPosition // Yahan 'center' ya 'start' use hoga
+            block: 'start'
         });
 
         // Mobile par link click hone ke baad menu band kar dein
