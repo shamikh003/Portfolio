@@ -527,9 +527,15 @@ footer {
 @media (max-width: 480px) {
     #hero {
         margin: 0;
-        flex-direction: column-reverse; 
+        flex-direction: column;
         text-align: center;
         padding-top: 40px;
+    }
+
+    #hero .hero-pic {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 10px;
     }
     
     #hero .hero-content {
